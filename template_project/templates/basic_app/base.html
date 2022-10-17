@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class = "navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <ul class="nav navbar-nav">
+          <li><a class="navbar-brand" href="{% url 'index' %}">Index</a></li>
+          <li><a class="nav-link" href="{% url 'admin:index' %}">Admin<a/></li>
+          <li><a class="nav-link" href="{% url 'basic_app:other' %}">Other</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+
+      {% block body_block %}
+      <!-- ANYTHING OUTSIDE THIS WILL BE INHERITED -->
+      {% endblock %}
+    </div>
+  </body>
+</html>
